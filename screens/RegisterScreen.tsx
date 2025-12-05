@@ -1,4 +1,3 @@
-// ChatApp/screens/RegisterScreen.tsx
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet, Alert, TouchableOpacity, ActivityIndicator } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
@@ -100,7 +99,7 @@ const styles = StyleSheet.create({
   registerButton: { 
       borderRadius: 10, 
       paddingVertical: 15,
-      backgroundColor: '#28a745', // Warna Hijau
+      backgroundColor: '#28a745', 
       alignItems: 'center',
       marginTop: 10,
       marginBottom: 20
