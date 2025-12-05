@@ -10,7 +10,7 @@ import {
   CollectionReference, 
   DocumentData,
 } from "firebase/firestore";
-// PERUBAHAN: Ganti getAuth dengan initializeAuth
+
 import { 
     initializeAuth, 
     getReactNativePersistence, 
@@ -21,7 +21,7 @@ import {
     User 
 } from "firebase/auth";
 import ReactNativeAsyncStorage from '@react-native-async-storage/async-storage'; // Import AsyncStorage
-// **PENTING: Ganti dengan konfigurasi proyek Firebase Anda**
+
 const firebaseConfig = {
   apiKey: "AIzaSyCrCBkg7w8OWfPcF_THclMwnehsYh28o5E",
   authDomain: "chatapp1-82b76.firebaseapp.com",
@@ -33,7 +33,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-// PERUBAHAN UTAMA: Inisialisasi Auth dengan Persistence
+// Inisialisasi Auth dengan Persistence
 const auth = initializeAuth(app, {
     persistence: getReactNativePersistence(ReactNativeAsyncStorage)
 });
@@ -55,7 +55,6 @@ export {
   onSnapshot,
   signOut,
   User,
-  // Ekspor fungsi Auth baru untuk Autentikasi Username/Password
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 };
