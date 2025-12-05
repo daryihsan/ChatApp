@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet, Alert, TouchableOpacity, ActivityIndicator } from "react-native"; 
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
