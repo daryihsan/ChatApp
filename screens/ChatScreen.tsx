@@ -23,7 +23,7 @@ import { messagesCollection } from "../firebase";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../App";
 import { launchImageLibrary } from 'react-native-image-picker';
-import RNFS from 'react-native-fs'; // Perlu diinstall: npm install react-native-fs
+import RNFS from 'react-native-fs';
 import AsyncStorage from "@react-native-async-storage/async-storage"; // Import AsyncStorage
 // ----------------------------------------------------
 // Tipe untuk Pesan - Menambahkan imageBase64
@@ -42,7 +42,7 @@ type Props = NativeStackScreenProps<RootStackParamList, "Chat">;
 const CHAT_STORAGE_KEY = 'chat_messages'; // Kunci AsyncStorage
 
 export default function ChatScreen({ route, navigation }: Props) {
-  const { email } = route.params; // Sekarang menggunakan email sebagai user ID
+  const { email } = route.params; 
   const [message, setMessage] = useState<string>("");
   const [messages, setMessages] = useState<MessageType[]>([]);
 
@@ -57,14 +57,14 @@ export default function ChatScreen({ route, navigation }: Props) {
     }
   };
 
-  // Gunakan useLayoutEffect untuk menambahkan tombol di Header
+  // useLayoutEffect untuk menambahkan tombol di Header
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => (
         <Button 
           onPress={handleLogout} 
           title="Logout" 
-          color="#FF6347" // Warna merah agar mudah terlihat
+          color="#FF6347" 
         />
       ),
     });
@@ -244,7 +244,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderTopWidth: 1,
     borderColor: "#ccc",
-    alignItems: 'center', // Agar tombol sejajar
+    alignItems: 'center', 
   },
   input: {
     flex: 1,
@@ -258,7 +258,7 @@ const styles = StyleSheet.create({
       paddingHorizontal: 10,
   },
   chatImage: {
-      width: 200, // Ukuran tetap untuk gambar
+      width: 200, 
       height: 200,
       borderRadius: 4,
       marginBottom: 5,
