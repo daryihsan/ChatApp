@@ -1,11 +1,10 @@
-// ChatApp/App.tsx
 import React, { useEffect, useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { View, ActivityIndicator } from "react-native";
 
 import LoginScreen from "./screens/LoginScreen";
-import RegisterScreen from "./screens/RegisterScreen"; // Screen baru
+import RegisterScreen from "./screens/RegisterScreen"; 
 import ChatScreen from "./screens/ChatScreen";
 
 // Hapus signInAnonymously
