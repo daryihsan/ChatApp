@@ -1,6 +1,6 @@
-// ChatApp/screens/LoginScreen.tsx
+
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, StyleSheet, Alert, TouchableOpacity, ActivityIndicator } from "react-native"; // <-- Komponen Standar
+import { View, Text, TextInput, Button, StyleSheet, Alert, TouchableOpacity, ActivityIndicator } from "react-native"; 
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../App";
 import { signInWithEmailAndPassword, auth } from "../firebase";
@@ -79,14 +79,14 @@ const styles = StyleSheet.create({
       flex: 1, 
       justifyContent: "center", 
       padding: 30, 
-      backgroundColor: '#f0f4f8' // Warna latar belakang terang
+      backgroundColor: '#f0f4f8' 
   },
   title: { 
       fontSize: 32, 
       textAlign: "center", 
       marginBottom: 50, 
       fontWeight: 'bold', 
-      color: '#102A43' // Warna teks gelap
+      color: '#102A43' 
   },
   input: {
     backgroundColor: '#fff',
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
   loginButton: { 
       borderRadius: 10, 
       paddingVertical: 15,
-      backgroundColor: '#007AFF', // Warna Biru Khas
+      backgroundColor: '#007AFF', 
       alignItems: 'center',
       marginTop: 10,
       marginBottom: 20
